@@ -47,9 +47,9 @@ const Todo = () => {
     <div>  <AddTaskForm addTask={addTask} /></div>
     <div className="todo-list">
       {tasks.map((task, index) => (
-        <ul class="ul"> <div >
-          <li className={`${task.isCompleted ? "todo-text todo-completed" : "todo-text"}` } class="list">
-        <div class="list-items"><input id="myCheckBox" type="checkbox" onClick={() => toggleTask(index)}  class="checkbox"  />
+        <ul class="ul"> <div className={task.isCompleted ? "todo-text todo-completed" : "todo-text"}>
+          <li className="list">
+        <div class="list-items"><input id="myCheckBox" type="checkbox"  onClick={() => toggleTask(index)}  class="checkbox"  />
           <span >{task.text}</span></div>
           <button onClick={() => removeTask(index)} class="deletebtn"><i class="fa fa-trash"></i></button>
         
@@ -68,9 +68,3 @@ const Todo = () => {
 export default Todo
 
 
-
-// style={{
-//   task.isCompleted ? "todo-text todo-completed" : "todo-text"
-// }} 
-
-// className={`${task.isCompleted ? "todo-text todo-completed" : "todo-text"}` } 
